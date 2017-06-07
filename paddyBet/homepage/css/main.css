@@ -1,0 +1,260 @@
+
+* {
+	box-sizing: border-box; 
+}
+body, html {
+    height: 100%;
+    margin: 0;
+
+}
+
+body{
+	font-family: 'Josefin Sans', sans-serif; 
+}
+
+.wrapper{
+	width: 1440px;
+	max-width: 90%;
+	margin: 0 auto;
+	padddding: 20rem 0;
+}
+
+
+
+#banner{
+	background: url('../images/pitch.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+} 
+
+header{
+	padding: 2rem 0;
+}
+
+#logo{
+	color: #fff;
+	font-weight:400;
+	font-size: 1.35rem;
+	float: left;
+}
+span{
+	font-weight: 700;
+}
+
+nav{
+	float: right;
+}
+
+nav a{
+	color: #fff;
+	font-weight: 700;
+	font-size: 1.35rem;
+	text-decoration: none;
+	margin-left: 2rem;
+}
+
+.content{
+	margin-top: 50px;
+	padding: 2rem 0 6rem 0;
+}
+
+.title, .sub_title{
+	color: #fff;
+	text-align: left;
+}
+.title{
+	font-size: 35px;
+	margin-top: 100px;
+}
+
+.sub_title{ 
+	font-weight: 400;
+	font-size: 20px;
+	margin: 0 auto 2rem auto;
+	line-height: 1.75;
+}
+
+.button, .form form input[type=submit]{
+	border: none;
+	outline: none;
+	border-radius: 2rem;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+	text-align: left;
+	padding: .80rem 3rem;
+	background-color: #7ac483; 
+	text-align: center;;
+
+	margin-bottm: 400px;
+}
+
+.cf:after, .cf:before{
+	content: "";
+	display: table;
+}
+.cf:after{
+	clear: both;
+}
+.button_wrapper{
+	text-align: left;
+	margin: 3rem 0;
+}
+
+
+.form{
+	float: right;
+	margin-top: 8%;
+}
+
+.form form input{
+	display: block;
+	width: 500px;
+	padding: 1rem;
+	margin: 1.5rem 0 1.5rem 0;
+	bwox-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+	bo
+}
+
+#features{
+	background: #f2f1f8;
+	padding: 2rem 0 6.5rem 0;
+	position: relative;  
+}
+
+.services{
+	width: 31%;
+	background-color: #fff;
+	float: left;
+	margin: -5rem 1% 0 1%;
+	padding: 3rem 2.5%;
+	-webkit-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+	-moz-box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+	box-shadow: 0px 0px 57px 0px rgba(4, 6, 9, 0.25);
+	border-radius: .35rem;
+	text-align: center;
+	position: relative;
+	height: 250px;
+} 
+
+.services h2{
+	margin: 0;
+	font-size: 1.5rem;
+	color:#3f3d4e;
+}
+.services p{
+   margin: 0 0 2rem 0;
+   color: #3f3d4e;
+}
+
+.services .button{
+	padding: .5rem 2rem;
+}
+
+#users{
+	background-color: #3f3d4e;
+	padding: 5rem 0;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+}
+.tiiiitle{
+	font-size: 2.5rem;
+	margin: 0 0 .75rem 0;
+}
+
+.profiles img{
+	width: 128px;
+	height: 128px;
+	border: 2px #fff solid;
+	border-radius: 50%;
+	margin: 20px 0;
+}
+
+.profiles table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    margin: 8px;
+}
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+	color: #000;
+}
+tr:nth-child(odd){
+	background-color: #fff;
+	color: #000;
+}
+
+#prompt{
+	background-color: #f2f1f8;
+	padding: 6rem 0 8rem 0;
+	text-align: center;
+}
+
+#prompt h2{
+	font-size: 2.5rem;
+	color: #000;
+	margin: 0 auto 4rem auto;
+	width: 600px;
+	max-width: 100%;
+	display: block;
+	text-align: center;
+
+}
+#prompt p{
+	font-size: 1.5rem;
+	color:#b9b7c6;
+	width: 450px;
+	max-width: 100%;
+	display: block;
+	margin: 0 auto 4rem auto;
+	text-align: center;
+}
+.button_large{
+	padding: 1rem 5rem;
+	font-size: 1.35rem; 
+}
+
+footer{
+	padding: 1rem 0;
+}
+.copyright{
+	text-align: center;
+	font-weight: 700;
+	color:#b9b7c6 ;
+}
+
+footer a{
+	color:#7ac483;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

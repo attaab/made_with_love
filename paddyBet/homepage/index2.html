@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+	<title>paddyBet - Social Betting Site</title>
+	<link href="css/main.css" rel="stylesheet" >
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../paddyBet/main.css">
+</head>
+<body onload="getstat()">
+	<section id="banner">
+		<div class="wrapper containered">
+		<header>
+			<h3 id="sitelogo" class="nav navbar-nav" style="margin-top: 10px; color: #10D0EC; font-size: 50px">paddyBet</h3>
+			<nav>
+				<a style="text-decoration: none; color: white" href="index.html">Home</a>
+				<a style="text-decoration: none; color: white" href="http://localhost/paddyBet/leaderboard/leaderboard.html">Leaderboard</a>
+				<a style="text-decoration: none; color: white" href="bet.html">Place bet</a>
+				<a style="text-decoration: none; color: white" href="user.html"><b style="font-weight: 800 ">Sign in</b> </a>
+			</nav>
+		</header>
+		<div class="form">
+			<form class="col-md-6">
+				<input type="text" name="textname"  data-toggle="tooltip" title="Choose a preferred Username" placeholder="Username" />
+				<input type="password" name="textpass" data-toggle="tooltip" title="Must be combination of numbers and letters" placeholder="Password"/>
+				<input type="phone" name="textphone" data-toggle="tooltip" title="Enter your Phone number" placeholder="Phone number" />
+				<input type="email" name="textemail" data-toggle="tooltip" title="Put in your best Email" placeholder="E-mail" />
+				<input type="checkbox" name="checkbox" value="check" id="agree" style="margin-left: 20px" /> 
+				<p style="color: white; margin-top: -35px";><strong style="font-size: 10px">By signing up, I accept the <span style="color: #10D0EC ">terms and conditions</span>, <span style="color: #10D0EC ">privacy policy</span> and i confirm that I am over 18 years old.</strong></p>
+				<input type="submit" name="button_submit" id="submit" placeholder="sign up for free" style="background-color: #10D0EC; margin-top: -10px;">
+			</form>
+		</div>
+		<div class="content"> 
+			<h1 class="title">A social betting network where you can place, share and copy bets from our community & friends</h1>
+			<h2 class="sub_title">Bet with your friends on ANYTHING, ANYTIME, ANYDAY !!</h2>
+		</div>
+		<div class="button_wrapper  getstat">
+			<a href="#" class="button button_highlight getstatbtn" style="background-color: #10D0EC; text-decoration: none;">Get started</a>
+		</div>
+		
+		</div>
+	</section>
+
+	<section id="features" class="cf">
+		<div class="wrapper">
+		<!--<div class="row"> -->
+ 			<div class="services">
+ 				<h6>TRENDING BETS</h6>
+				<h3>Sunderland vs Norwich</h3>
+				<p>
+					<a href="#">
+						<span class="seemore">[see more]</span>
+					</a>
+				</p>
+				<p>by wiz-temple | 234 views</p>
+				<a style="background-color: #10D0EC" class="button button_highlight button_small">Join bet</a>	
+			</div>
+			<div class="services">
+				<h6>TRENDING BETS</h6>
+				<h3>R. Madrid vs Barcelona</h3>
+				<p>
+					<a href="#">
+						<span class="seemore">[see more]</span>
+					</a>
+				</p>
+				<p>by joey | 678 views</p>
+				<a style="background-color: #10D0EC" class="button button_highlight button_small">Join bet</a>	
+			</div>
+			<div class="services">
+				<h6>TRENDING BETS</h6>
+				<h3>La Lakers vs Chicago Bulls</h3>
+				<p>
+					<a href="#">
+						<span class="seemore">[see more]</span>
+					</a>
+				</p>
+				<p>by Sammy | 1,988 views</p>
+				<a style="background-color: #10D0EC" class="button button_highlight button_small">Join bet</a>	
+			</div>
+		</div>
+	</section>
+	<section style="background-color: #10D0EC" id="users">
+		<div class="wrapper">
+			<h2> Support the community </h2>
+			<p>Invite your friends</p>
+			<p>More bets more tipstars to copy </p>
+			<div class="row" id="profiles">
+			<div class="profiles col-md-3">
+			<img src="images/profile.jpg">
+			<p class="profile_name"> Nathaniel </p>
+			<table>
+				<tr>
+					<td>Wins</td>
+					<td>73</td>
+				</tr>
+				<tr>
+					<td>Losses</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Followers</td>
+					<td>1,273</td>
+				</tr>
+			</table>
+			</div>
+			<div class="profiles col-md-3">
+				<img src="images/profile.jpg">
+				<p class="profile_name"> Biodun </p>
+				<table>
+					<tr>
+						<td>Wins</td>
+						<td>73</td>
+					</tr>
+					<tr>
+						<td>Losses</td>
+						<td>45</td>
+					</tr>
+					<tr>
+						<td>Followers</td>
+						<td>1,273</td>
+					</tr>
+				</table>
+			</div>
+			<div class="profiles col-md-3">
+				<img src="images/profile.jpg">
+				<p class="profile_name"> Adedayo </p>
+				<table>
+					<tr>
+						<td>Wins</td>
+						<td>73</td>
+					</tr>
+					<tr>
+						<td>Losses</td>
+						<td>45</td>
+					</tr>
+					<tr>
+						<td>Followers</td>
+						<td>1,273</td>
+					</tr>
+				</table>
+			</div>
+			<div class="profiles col-md-3">
+				<img src="images/profile.jpg">
+				<p class="profile_name"> Jones </p>
+				<table>
+					<tr>
+						<td>Wins</td>
+						<td>73</td>
+					</tr>
+					<tr>
+						<td>Losses</td>
+						<td>45</td>
+					</tr>
+					<tr>
+						<td>Followers</td>
+						<td>1,273</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section id="prompt">
+		<div class="wrapper">
+		    <div>
+		    	<h2 class="title">
+					<b id="join">Join paddyBet today!</b>
+				</h2>
+		    </div>
+			
+			<div>
+				<p id="text" class="sub_title">
+					We have got you covered!. Even when you lose, <b>YOU WIN!<br> sign up</b> let's help you make money for leisure
+				</p>
+			</div>
+
+			<div class="button_wrapper">
+				<a href="#" class="button button_highlight getstatbtns" style="text-decoration: none;">Get started</a>
+			</div>
+
+		</div>
+	</section>
+	
+	<footer>
+		<p class="copyright">
+			<h1 style="font-size: 16px; text-align: center"><b>paddyBet</b> © 2017</h1>
+			<p  style="text-align: center">
+				All rights reserved.
+			</p>
+			
+		 
+			 
+	</footer>
+	
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	 <script type="text/javascript" src = "../../paddyBet/paddyBet.js"></script>
+</body>
+</html>

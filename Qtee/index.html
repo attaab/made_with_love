@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>QTEE | Best Sellers</title>
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/plugins/font_awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- the cart area -->
+    <div id="sidenav" class="sidenav text-center">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeCartMenu();">&times</a>
+        <h1 id="count">0</h1>
+        <h5><i>items in your cart</i></h5>
+        <h1 class="margin_between">
+            <span>₦</span>
+            <span id="totalAmount">0</span>
+        </h1>
+        <h6><i>total cart value</i></h6>
+
+        <button class="checkout_btn margin_between">YOUR CART</button>
+             <ul id="cartItems">
+                 
+             </ul>
+             <div>
+                 <button id="clear_cart">
+                     clear cart
+                 </button>
+             </div>
+        <div>
+           <button class="checkout_btn_continue margin_between" onclick="closeCartMenu();">
+            Continue Shopping
+           </button> 
+        </div>
+    </div>
+    <!-- END OF CART AREA -->
+    <!-- main page -->
+   <div id="main">
+       <header class="new_offer width_height">
+           <div class="text-center">
+               <p>FREE SHIPPING ON ALL ORDERS +$50*</p>
+           </div>
+       </header>
+       <nav class="navbar width_height">
+           <div class="container">
+               <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color:  #d3d6d7;">
+                       <span class="icon-bar" style="background-color: #303030;"></span>
+                       <span class="icon-bar" style="background-color: #303030;"></span>
+                        <span class="icon-bar" style="background-color: #303030;"></span>
+                   </button>
+               </div>
+               <div class="collapse navbar-collapse" id="myNavbar">
+                   <ul class="nav navbar-nav navbar-right icons_nav">
+                       <li class="menu_control">
+                        <a href="#"><i class="glyphicon glyphicon-search"></i></a>
+                       </li>
+                       <li class="menu_control">
+                        <a href="#"><i class="fa fa-user"></i></a>
+                       </li>
+                       <li class="menu_control">
+                        <a href="#"><i class="fa fa-shopping-cart" onclick="openCartMenu();"></i></a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+        </nav>
+        <div class="page-header text-center">
+            <img src="./assets/img/qtee_logo_d5675f44-8505-4ece-96de-edde09d9d5c8_250xbe9b.png">
+        </div>
+        <div class="container text-center container_page_sections" style=" font-size: 14px;">
+            <div class="text-center">
+                <ul class="ul_nav nav navbar-nav pageNav">
+                    <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">SHOP</a></li>
+                     <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">APPAREL</a></li>
+                    <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">SHOES</a></li>
+                    <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">ACCESSORIES</a></li>
+                     <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">CREATE YOUR OWN</a></li>
+                     <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">QTEE REP</a></li>
+                     <li class="vertical_nav_item"><a href="#" data-toggle="tooltip" title="Doro bad">OUR CHARITY</a></li>
+                     <li class="icon">
+                         <a href="javascript:void(0);" onclick="pagemenu();">&#9776;</a>
+                     </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="row margin_between">
+                <div class="col-sm-1 col-md-1">
+                    
+                </div>
+                <div class="col-sm-10 col-md-10">
+                    <img class="img-responsive" src="./assets/img/splash_best-sellers_2000x4cef.jpg" height="450">
+                </div>
+                <div class="col-sm-1 col-md-1">
+                    
+                </div>
+            </div>
+            <div class="row title_bar text-center margin_between">
+                 <h4 class="page_title">BEST SELLERS</h4>
+            </div>
+                 <p class="margin_between">
+                     Shop our most wanted t-shirts, tank tops, mini tanks, boyfriend tees, open back tees, crop tops, crewneck pull overs, hoodies and hats.
+                 </p>
+            <div class="row margin_between">
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-4">
+                    <label>Shop By Budget</label>
+                    <form>
+                        ₦<input id="sort_tool" type="number" value="" name="">
+                        <input type="button" value="shop" name="" onclick="budget();">
+                    </form>
+                       <p id="budgetInfo" style="color: red;"></p>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <div class="container">
+                 <div id="budgetItem" class="row">
+               
+                </div>
+            </div>
+            <div class="row filter_select margin_between">
+                <div class="col-sm-2 col-md-2">
+                    <h5>
+                        Filter
+                    </h5>
+                    <select>
+                        <option>
+                            All products
+                        </option>
+                        <option>
+                            adventure
+                        </option>
+                        <option>
+                            Aloha
+                        </option>
+                        <option>
+                            beach
+                        </option>
+                        <option>
+                            Coconut
+                        </option>
+                        <option>
+                            Donut
+                        </option>
+                        <option>
+                            glaze craze
+                        </option>
+                        <option>
+                            La Playa Por Favour
+                        </option>
+                        <option>
+                            Mermaid
+                        </option>
+                        <option>
+                            Namastay
+                        </option>
+                    </select>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    
+                </div>
+                <div class="col-sm-2 col-md-2">
+                    <h5>
+                        Sort
+                    </h5>
+                    <select>
+                        <option>
+                            Featured
+                        </option>
+                        <option>
+                            Price, low to high
+                        </option>
+                        <option>
+                            Price high to low
+                        </option>
+                        <option>
+                            Alphabetically A-Z
+                        </option>
+                        <option>
+                           Alphabetically Z-A
+                        </option>
+                        <option>
+                            Date, new to old
+                        </option>
+                        <option>
+                            Date, old to new
+                        </option>
+                        <option>
+                            Best selling
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div id="itemsForSale" class="row margin_between itemsForSale itemsonsale">
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Aloha Boy Short" data-price="10" data-img="./assets/img/Aloha_760x9923.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/Aloha_760x9923.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                                Aloha Boy Short
+                            </h5>
+                             <h5>
+                                ₦10
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Crazy Coconuts Canvas Tote" data-price="14" data-img="./assets/img/Crazy-Coconuts-2_760x4996.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/Crazy-Coconuts-2_760x4996.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               Crazy Coconuts Canvas Tote
+                            </h5>
+                             <h5>
+                                ₦14
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Dos_Pinas_cotton_Spandex_Crop_Tank" data-price="14" data-img="./assets/img/dos_pinas_sports_bra_760x0efb.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/dos_pinas_sports_bra_760x0efb.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               Dos Pinas cotton Spandex Crop Tank
+                            </h5>
+                             <h5>
+                                ₦13
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name=" Glaze craze T-Strap Tank" data-price="17" data-img="./assets/img/glaze_craze_tstrap_760x6d87.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/glaze_craze_tstrap_760x6d87.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               Glaze craze T-Strap Tank
+                            </h5>
+                             <h5>
+                                ₦17
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   <!-- SECOND ROW -->
+
+        <div class="container">
+        <div id="itemsForSale2" class="row margin_between itemsForSale2 itemsonsale">
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name=" Going Coconuts Boy Short" data-price="15" data-img="./assets/img/Coconut_760x20b9.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/Coconut_760x20b9.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                                Going Coconuts Boy Short
+                            </h5>
+                             <h5>
+                                ₦15
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Crazy Coconuts Canvas Tote" data-price="14" data-img="./assets/img/Crazy-Coconuts-2_760x4996.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/la_playa_por_favor_tstrap_760x1794.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                              La Playa Por Favor! T-strap Tank
+                            </h5>
+                             <h5>
+                                ₦20
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Dos Pinas cotton Spandex Crop Tank" data-price="14" data-img="./assets/img/dos_pinas_sports_bra_760x0efb.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/mermaid_at_heart_loose_crop_760xe584.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               Mermaid at Heart Loose Crop Top
+                            </h5>
+                             <h5>
+                                ₦25
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name=" Glaze craze T-Strap Tank" data-price="17" data-img="./assets/img/glaze_craze_tstrap_760x6d87.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/namastay_in_bed_sports_bra_760x541c.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                              Namast'ay in Bed Cotton Spandex Crop Tank
+                            </h5>
+                             <h5>
+                                ₦15
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- THIRD SECTION -->
+
+        <div class="container">
+        <div id="itemsForSale" class="row margin_between itemsForSale">
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Aloha Boy Short" data-price="10" data-img="./assets/img/Aloha_760x9923.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/namaste_beaches_hi-lo_muscle_tank_760xa795.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                                Namaste Beaches Hi-Lo Muscle Tank
+                            </h5>
+                             <h5>
+                                ₦17 
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Crazy Coconuts Canvas Tote" data-price="14" data-img="./assets/img/Crazy-Coconuts-2_760x4996.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/Tote_Bag-White-No_One_Likes_A_Shady_Beach_760x6077.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               No one Likes a Shady Beach Canvas
+                            </h5>
+                             <h5>
+                                ₦14
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Dos Pinas cotton Spandex Crop Tank" data-price="14" data-img="./assets/img/dos_pinas_sports_bra_760x0efb.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/no-one-likes-a-shady-beach---blk-oversized-tee_760x48df.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                              No One likes a Shady Beach Oversized Boyfriend Tee
+                            </h5>
+                             <h5>
+                                ₦14
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name=" Glaze craze T-Strap Tank" data-price="17" data-img="./assets/img/glaze_craze_tstrap_760x6d87.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/No-one-likes-a-shady-beach---racer-tank_760xf79d.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               No One Likes a Shady Beach Long Racer Tank
+                            </h5>
+                             <h5>
+                                ₦17
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- FOURTH SECTION -->
+    
+
+      <div class="container">
+        <div id="itemsForSale" class="row margin_between itemsForSale">
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Aloha Boy Short" data-price="10" data-img="./assets/img/Aloha_760x9923.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/no_one_likes_a_shady_beach_open_back_tee_760x9a19.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                                No One Likes a Shady Beach Open B ack Tee
+                            </h5>
+                             <h5>
+                                ₦17
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Crazy Coconuts Canvas Tote" data-price="14" data-img="./assets/img/Crazy-Coconuts-2_760x4996.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/pack_your_bags_loose_crop_760x090c.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               Pack Your Bags Loose Crop Top
+                            </h5>
+                             <h5>
+                                ₦15
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name="Dos Pinas cotton Spandex Crop Tank" data-price="14" data-img="./assets/img/dos_pinas_sports_bra_760x0efb.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/save_our_mermaids_tstrap_760x3368.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                               Save Our Meermaids T-strap Tank
+                            </h5>
+                             <h5>
+                                ₦18
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="product text-center" data-name=" Glaze craze T-Strap Tank" data-price="17" data-img="./assets/img/glaze_craze_tstrap_760x6d87.jpg" data-unit="per item">
+                        <div class="container_image_zoom">
+                            <div class="image_zoom">
+                                <img class="img-responsive" src="./assets/img/adventurewh1_760xe613.jpg" width="262.5" height="262.5">
+                            </div>
+                        </div>
+                        <div class="p_title">
+                            <h5>
+                              Let's Adventure Oversized Boyfriend Tee
+                            </h5>
+                             <h5>
+                                ₦20
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+    <!-- FOOTER ROW -->
+
+    <footer class="container-fluid bg-4">
+       <div class="row">
+           <div class="col-md-1">
+               
+           </div>
+           <div class="col-md-3  text-left">
+               <header>
+                   CONTACT US
+               </header>
+               <p class="margin_between">
+                   Email: customerservice@qtee.com<br/>
+
+                    Tel: 800.480.1488<br/>
+                    (Monday- Friday 
+                    8:00 am - 4:30 pm, PT)
+               </p>
+           </div>
+           <div class="col-md-2 text-center links">
+               <header>
+                   LINKS
+               </header>
+               <div class="margin_between">
+                   <a href="#">
+                   GIFT CARDS
+               </a>
+               <a href="#">
+                   AFFILIATE
+               </a>
+               <a href="#">
+                  QTEE FAQ'S
+               </a>
+               <a href="#">
+                   RETURNS & EXCHANGES
+               </a>
+               <a href="#">
+                  SIZE CHARTS
+               </a>
+               <a href="#">
+                  PRIVACY POLICY
+               </a>
+               <a href="#">
+                BLOG
+               </a>
+               </div>
+           </div>
+           <div class="col-md-3">
+               <header class="footer_email_arrow_right">
+                   JOIN OUR MAILING LIST
+               </header>
+               <input style="color: black" type="text" placeholder="Enter email" name="">
+               <label>
+                   <button type="submit"><i class="fa fa-arrow-right" style="color: black"></i></button>
+               </label>
+           </div>
+           <div class="col-md-2 foot_social">
+               <header class="text-center">
+                   SOCIAL NETWORKS
+               </header>
+               <div class="row">
+                   <div class="col-md-3">
+                       <i class="fa fa-facebook"></i>
+                   </div>
+                   <div class="col-md-3">
+                       <i class="fa fa-twitter"></i>
+                   </div>
+                   <div class="col-md-3">
+                       <i class="fa fa-pinterest"></i>
+                   </div>
+                   <div class="col-md-3">
+                       <i class="fa fa-instagram"></i>
+                   </div>
+               </div>
+           </div>
+            <div class="col-md-1">
+               
+           </div>
+       </div>
+        <!-- PAYMENTS METHODS COMMENTED OUT -->
+      <!--  <div class="row">
+           <div class="col-md-4">
+               
+           </div>
+           <div class="col-md-6 margin_between payments_method">
+               <div class="row">
+                   <div class="col-md-2">
+                       
+                   </div>
+                   <div class="col-md-10">
+                    <div class="row img">
+                         <div class="col-md-1 img_containers">
+                            <img id="img" src="./assets/img/creditcards_american_express-54be4e6bfc1dbd42f93af603e102fde2356dfe2372a7dd851074964337533296.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_apple_pay-d460161363710d3569a32e30d86970452cbc865913615b792b184c8d448108dc.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_diners_club-d07838507a213e5e52ef4272d3ccfe3da294642628264cd0934baf6878ceb197.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_discover-96a6318d3deeede785ba12114a8d00bd23731f9f16e14ddcd0bdfd5e1d846307.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_jcb-8f8079695e74d5688707997b208994c4d8078baa58b866ed47852cf9674d9332.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_paypal-dd71910a20fd73f78b4eed60e89331d4f4ceb38d55ef42e1e9935d78070ba3e2.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_visa-e9f829d15f5ec3b1953ba8b9bc59b448ddb1ec9235ae70c7936178744cb31489.svg" width="60">
+                       </div>
+                        <div class="col-md-1">
+                           <img src="./assets/img/creditcards_master-94df290d56a3c6424296953282e18e46895ba94bdef368640eb52f8349915610.svg" width="60">
+                       </div>
+                    </div>
+                   </div>
+               </div>
+           </div>
+            <div class="col-md-4">
+              
+           </div>
+       </div> -->
+    </footer>
+    </div>
+
+
+
+
+   <script type="text/javascript" src="./assets/plugins/jquery.js"></script>
+   <script type="text/javascript" src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script type="text/javascript">
+        document.onreadystatechange= function(){
+        if(document.readyState === "complete"){
+            app.cartCtrl();
+            }
+        };
+    </script>
+</body>
+</html>

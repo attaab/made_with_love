@@ -1,0 +1,24 @@
+@media screen and (max-width: 767px){
+     #navbar-example ul li a:not(last-child){
+     	display: none;
+     }
+    #collapseIcon{
+    	display: block;
+    }
+     .col-md-1 .page_logo{
+     	margin-left: -3px;
+     }
+     #home{
+     height: 500px;
+	height: 700px;
+     }
+    #picture_change{
+    	height: 1000px;
+    	size: 130%;
+    	margin-left: -150px;
+    }
+    #collapseIcon{
+    	display: block;
+    }
+   
+}
