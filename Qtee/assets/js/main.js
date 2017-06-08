@@ -84,15 +84,7 @@ var app = {
          return total;
      }
 
-    //  addItemToCart("bag", 100, 2, "kg", "bag.png"); 
-    //  addItemToCart("bag", 100, 2, "kg", "bag.png");
-    //  addItemToCart("bag", 100, 2, "kg", "bag.png");
-    //  addItemToCart("bag", 100, 2, "kg", "bag.png");
-    //  addItemToCart("shoe", 120, 2, "kg", "shoe.png");
-    //  totalCountOfItems();
 
-
-     //total amount
      function totalAmount(){
          var amount = 0;
          for(var i in cart){
@@ -147,14 +139,22 @@ var app = {
          for (var i in cartArray){
             //  `` is the same as ""
 
-             output += `<li>${cartArray[i].name} -- ${cartArray[i].price} <span class="remove" data-action = ${cartArray[i].name}>X</span> </li>`;  //ES6 syntax
+             output += `<li>${cartArray[i].name} -- ${cartArray[i].price } <span style="color:#D00;" class="remove" data-action = ${cartArray[i].name}>X</span> </li>`;  //ES6 syntax
              //output += "<li>" + cartArray[i].name "</li> "  //ES5 syntax    
          }
          var cartItems = document.getElementById('cartItems');
+         var payoutCart = document.getElementById('Payout_cart');
          var counter = document.getElementById('count');
+         var checkout_count = document.getElementById('checkout_count');
+         var totalAmount = document.getElementById('totalAmount');
+         var checkout_totalAmount = document.getElementById('checkout_totalAmount');
 
          cartItems.innerHTML = output;
+         payoutCart.innerHTML = output;
          counter.innerHTML = totalCountOfItems();
+         totalAmount.innerHTML =  grandTotal();
+         checkout_count.innerHTML = totalCountOfItems();
+         checkout_totalAmount = grandTotal();
      }
 
 
@@ -174,6 +174,10 @@ var app = {
      var products = Array.from(document.getElementById('products').querySelectorAll('.card'));
      var removes = Array.from(document.querySelectorAll('.remove'));
      var clearCart = document.getElementById('clear_cart');
+
+
+
+     
      
      // console.log(products);
 

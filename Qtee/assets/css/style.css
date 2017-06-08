@@ -52,12 +52,14 @@ ul.pageNav li.icon{
 }
 .sidenav{
     color: #000;
+    border-left: 1px solid #999;
+    z-index: 5;
 }
 .sidenav h1{
     font-size: 50px;
 }
 .margin_between{
-    margin-top: 20px !important;
+    margin-top: 40px !important;
 }
 .checkout_btn{
     margin-bottom: 10px;
@@ -177,7 +179,12 @@ ul.pageNav li.icon{
 #img{
     margin-left: -60px;
 }
-
+.modal-content{
+    background-color: lightyellow;
+}
+.checkout_count{
+    border: 1px solid #999;
+}
 
 
 
